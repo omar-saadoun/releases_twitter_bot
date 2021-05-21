@@ -1,4 +1,4 @@
-name: Send a Tweet
+name: Tweet each release
 on:
   push:
     tags:
@@ -9,7 +9,7 @@ jobs:
     steps:
       - uses: ethomson/send-tweet-action@v1
         with:
-          status: "Wathchout aeternity new release for ${{ github.repository}}\n"
+          status: "Watch out aeternity new release for ${{ github.repository}}\n"
           consumer-key: ${{ secrets.API_KEY }}
           consumer-secret: ${{ secrets.API_KEY_SECRET }}
           access-token: ${{ secrets.ACCESS_TOKEN }}
