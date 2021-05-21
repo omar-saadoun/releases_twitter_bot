@@ -7,10 +7,16 @@ jobs:
   tweet:
     runs-on: ubuntu-latest
     steps:
+     - uses: actions/checkout@v2
+      - name: Get commit info
+        run: |
+          echo "::set-env name=head::$(git log -1 HEAD --pretty=format:%s)"
+          echo "::set-env name=body::$(git log -1 HEAD --pretty=format:%b)" 
       - uses: ethomson/send-tweet-action@v1
         with:
-          status: "Hi, this is a test!"
+          status: "Wathchout aeternity new release for ${{ github.repository}}\n${{ env.head }}\n${{ env.body }}"
           consumer-key: ${{ secrets.API_KEY }}
           consumer-secret: ${{ secrets.API_KEY_SECRET }}
           access-token: ${{ secrets.ACCESS_TOKEN }}
           access-token-secret: ${{ secrets.ACCESS_TOKEN_SECRET }}
+          
