@@ -7,7 +7,7 @@ jobs:
   tweet:
     runs-on: ubuntu-latest
     steps:
-     - uses: actions/checkout@v2
+      - uses: actions/checkout@v2
       - name: Get commit info
         run: |
           echo "::set-env name=head::$(git log -1 HEAD --pretty=format:%s)"
