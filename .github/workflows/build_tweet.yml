@@ -12,5 +12,5 @@ jobs:
           status: "Hi, this is a test!"
           consumer-key: ${{ secrets.CONSUMER_KEY }}
           consumer-secret: ${{ secrets.CONSUMER_SECRET }}
-          access-token: ${{ secrets.ACCESS_TOKEN }}
-          access-token-secret: ${{ secrets.ACCESS_TOKEN_SECRET }}
+          access-token: ${{ secrets.API_KEY }}
+          access-token-secret: ${{ secrets.API_KEY_SECRET }}
