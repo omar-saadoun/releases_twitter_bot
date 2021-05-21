@@ -14,4 +14,3 @@ jobs:
           consumer-secret: ${{ secrets.CONSUMER_SECRET }}
           access-token: ${{ secrets.ACCESS_TOKEN }}
           access-token-secret: ${{ secrets.ACCESS_TOKEN_SECRET }}
-
