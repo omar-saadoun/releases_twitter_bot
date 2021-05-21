@@ -1,5 +1,5 @@
 const config = require('./config');
 
 // Using Twitter library
-const Bot = new Twitter(config);
+const bot = new Twitter(config);
 
